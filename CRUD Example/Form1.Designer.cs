@@ -1,7 +1,7 @@
 ﻿
 namespace CRUD_Example
 {
-    partial class Form1
+    partial class ContactApp
     {
         /// <summary>
         /// Required designer variable.
@@ -46,10 +46,10 @@ namespace CRUD_Example
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(27, 194);
+            this.btnSave.Location = new System.Drawing.Point(64, 332);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(111, 74);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@ namespace CRUD_Example
             // Name
             // 
             this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(91, 34);
+            this.Name.Location = new System.Drawing.Point(144, 134);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(45, 17);
             this.Name.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace CRUD_Example
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(142, 32);
+            this.txtName.Location = new System.Drawing.Point(195, 132);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(190, 22);
@@ -75,17 +75,19 @@ namespace CRUD_Example
             // dgvContacts
             // 
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContacts.Location = new System.Drawing.Point(356, 72);
+            this.dgvContacts.Location = new System.Drawing.Point(534, 72);
             this.dgvContacts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvContacts.Name = "dgvContacts";
+            this.dgvContacts.ReadOnly = true;
             this.dgvContacts.RowHeadersWidth = 51;
             this.dgvContacts.RowTemplate.Height = 24;
-            this.dgvContacts.Size = new System.Drawing.Size(432, 145);
+            this.dgvContacts.Size = new System.Drawing.Size(735, 391);
             this.dgvContacts.TabIndex = 3;
+            this.dgvContacts.DoubleClick += new System.EventHandler(this.dgvContacts_DoubleClick);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(142, 130);
+            this.txtAddress.Location = new System.Drawing.Point(195, 230);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -95,7 +97,7 @@ namespace CRUD_Example
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 133);
+            this.label2.Location = new System.Drawing.Point(129, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 4;
@@ -103,7 +105,7 @@ namespace CRUD_Example
             // 
             // txtMobileNumber
             // 
-            this.txtMobileNumber.Location = new System.Drawing.Point(143, 81);
+            this.txtMobileNumber.Location = new System.Drawing.Point(196, 181);
             this.txtMobileNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMobileNumber.Name = "txtMobileNumber";
             this.txtMobileNumber.Size = new System.Drawing.Size(189, 22);
@@ -112,7 +114,7 @@ namespace CRUD_Example
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 84);
+            this.label3.Location = new System.Drawing.Point(86, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 17);
             this.label3.TabIndex = 6;
@@ -120,23 +122,26 @@ namespace CRUD_Example
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(143, 194);
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(196, 332);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(111, 74);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(257, 194);
+            this.btnReset.Location = new System.Drawing.Point(327, 332);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.Size = new System.Drawing.Size(111, 74);
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtSearch
             // 
@@ -148,20 +153,20 @@ namespace CRUD_Example
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(534, 32);
+            this.btnSearch.Location = new System.Drawing.Point(534, 25);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(75, 36);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // Form1
+            // ContactApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 240);
+            this.ClientSize = new System.Drawing.Size(1294, 486);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnReset);
@@ -175,8 +180,8 @@ namespace CRUD_Example
             this.Controls.Add(this.Name);
             this.Controls.Add(this.btnSave);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            //this.Name = "Form1";
             this.Text = "Contact App";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
