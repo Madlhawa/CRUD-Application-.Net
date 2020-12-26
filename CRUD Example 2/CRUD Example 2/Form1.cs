@@ -101,8 +101,8 @@ namespace CRUD_Example_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string str = ConfigurationManager.ConnectionStrings["DBEntities"].ConnectionString.ToString();
-            MessageBox.Show(str);
+            Form_Settings f_setings = new Form_Settings();
+            f_setings.ShowDialog();
         }
     }
 }
